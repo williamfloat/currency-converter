@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.top-navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.top-navbar a {
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.currency-converter, .top-currencies {
+    padding: 20px;
+    margin-top: 60px; /* Height of navbar */
+}
+
+.news-sidebar {
+    position: fixed;
+    right: 0;
+    top: 60px; /* Height of navbar */
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    height: 100vh;
+    overflow: auto;
+}
+
+.page-footer {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .top-navbar {
+        flex-direction: column;
+    }
+
+    .news-sidebar {
+        position: relative;
+        width: 100%;
+        top: 0;
+        height: auto;
+    }
+}
