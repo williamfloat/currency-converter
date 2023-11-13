@@ -38,6 +38,25 @@ body {
     overflow: auto;
 }
 
+#newsFeed h3 {
+    color: #333; 
+    font-size: 14px;
+    margin-bottom: 1px;  /* Add some bottom margin for spacing */
+}
+
+#newsFeed p {
+    color: #000; 
+    font-size: 14px;
+    margin-bottom: 1px;  /* Add some bottom margin for spacing */
+}
+
+#newsFeed a {
+    color: #000099; 
+    font-size: 12px;
+    margin-bottom: 1px;  /* Add some bottom margin for spacing */
+}
+
+
 .page-footer {
     background-color: #333;
     color: white;
