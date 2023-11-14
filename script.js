@@ -23,7 +23,7 @@ function populateDropdowns() {
 function convertCurrency() {
     const fromCurrency = document.getElementById('currency1').value;
     const toCurrency = document.getElementById('currency2').value;
-    const amount = 1; // This can be dynamic based on user input
+    const amount = document.getElementById('amount').value;
 
     const requestOptions = {
         method: 'GET',
@@ -38,7 +38,7 @@ function convertCurrency() {
             // Update the conversion result on the webpage
             const resultElement = document.getElementById('conversionResult');
             if (result.success) {
-                resultElement.textContent = `1 ${fromCurrency} = ${result.result} ${toCurrency}`;
+                resultElement.textContent = `${amount} ${fromCurrency} = ${result.result} ${toCurrency}`;
             } else {
                 resultElement.textContent = 'Conversion failed. Please try again.';
             }
