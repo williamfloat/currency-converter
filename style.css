@@ -1,68 +1,73 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #fafafa;
+    color: #333;
 }
 
 .top-navbar {
-    background-color: #333;
+    background-color: #2c3e50;
     color: white;
     display: flex;
     justify-content: space-around;
+    padding: 10px 0;
     position: fixed;
-    width: 100%;
     top: 0;
+    width: 100%;
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .top-navbar a {
-    padding: 15px;
-    text-decoration: none;
     color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-.currency-converter, .top-currencies {
+.top-navbar a:hover {
+    color: #f1c40f;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px; /* Adjust based on the height of the navbar */
     padding: 20px;
-    margin-top: 60px; /* Height of navbar */
+}
+
+.currency-converter {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    flex-grow: 1; /* Allows this section to grow */
 }
 
 .news-sidebar {
-    position: fixed;
-    right: 0;
-    top: 60px; /* Height of navbar */
-    width: 250px;
-    background-color: #f4f4f4;
+    background: white;
     padding: 20px;
-    height: 100vh;
-    overflow: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 58vh; /* Full viewport height */
+    overflow-y: auto; /* Scrollable content */
 }
-
-#newsFeed h3 {
-    color: #333; 
-    font-size: 14px;
-    margin-bottom: 1px;  /* Add some bottom margin for spacing */
-}
-
-#newsFeed p {
-    color: #000; 
-    font-size: 14px;
-    margin-bottom: 1px;  /* Add some bottom margin for spacing */
-}
-
-#newsFeed a {
-    color: #000099; 
-    font-size: 12px;
-    margin-bottom: 1px;  /* Add some bottom margin for spacing */
-}
-
 
 .page-footer {
-    background-color: #333;
+    background-color: #2c3e50;
     color: white;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    align-items: center;
+}
+
+.videos iframe {
+    max-width: 100%;
+    height: auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -70,10 +75,17 @@ body {
         flex-direction: column;
     }
 
+    .main-content {
+        flex-direction: column;
+    }
+
+    .currency-converter, .news-sidebar {
+        width: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
     .news-sidebar {
-        position: relative;
-        width: 100%;
-        top: 0;
-        height: auto;
+        height: auto; /* Adjustable height on smaller screens */
     }
 }
