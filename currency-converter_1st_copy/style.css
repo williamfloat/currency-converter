@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.top-navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    position: flex;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+.top-navbar a {
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+h4 {
+    font-size: 16px;
+    color: #333;
+    margin: 20px 0;
+}
+
+.faq {
+    background-color: #9fdaea;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+nav a:hover,
+footer:hover {
+    color: #0077b6;
+    font-weight: bold;
+}
+
+.currency-converter,
+.top-currencies {
+    padding: 20px;
+    margin-top: 60px;
+    /* Height of navbar */
+}
+
+.news-sidebar {
+    position: fixed;
+    right: 0;
+    top: 60px;
+    /* Height of navbar */
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    height: 100vh;
+    overflow: auto;
+}
+
+.page-footer {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .top-navbar {
+        flex-direction: column;
+    }
+
+    .news-sidebar {
+        position: relative;
+        width: 100%;
+        top: 0;
+        height: auto;
+    }
+}
