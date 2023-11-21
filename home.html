@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <nav class="top-navbar">
@@ -13,20 +13,39 @@
         <a href="#news">News</a>
         <a href="#contact">Contact Us</a>
         <a href="#faq">FAQ</a>
-        <a href="#finance-education">Finance Education</a>
         <a href="#about">About Us</a>
     </nav>
 
     <div class="main-content">
-        <div class="currency-converter">
+        <div class="container">
             <h2>Currency Converter</h2>
-            <select id="currency1"></select>
-            <select id="currency2"></select>
-            <input type="number" id="amount" name="amount" value="1" min="1" step="1">
-            <button onclick="convertCurrency()">Convert</button>
-            <p id="conversionResult"></p>
+            <form>
+                <div class="amount">
+                    <p>Amount</p>
+                    <input type="text" value="1">
+                </div>
+                <div class="convert-box">
+                    <div class="from">
+                        <p>From</p>
+                        <div class="select-input">
+                            <img src="https://flagcdn.com/48x36/us.png">
+                            <select></select>
+                        </div>
+                    </div>
+                    <div class="reverse"><i class="fas fa-exchange-alt"></i></div>
+                    <div class="to">
+                        <p>To</p>
+                        <div class="select-input">
+                            <img src="https://flagcdn.com/48x36/gb.png">
+                            <select></select>
+                        </div>
+                    </div>
+                    <div class="result">Getting exchange rate...</div>
+                    <button>Get Exchange Rate</button>
+                </div>
+            </form>
         </div>
-
+        
         <div class="top-currencies">
             <!-- Placeholder for top currencies and their charts -->
         </div>
@@ -62,5 +81,7 @@
         </div>
     </footer>
 
+    <script src="countries.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

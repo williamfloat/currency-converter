@@ -1,53 +1,81 @@
-document.addEventListener('DOMContentLoaded', function() {
-    populateDropdowns();
-    // Other initializations can be added here if needed
-});
+const fromCur = document.querySelector(".from select");
+const toCur = document.querySelector(".to select");
+const getBtn = document.querySelector("form button");
+const exIcon = document.querySelector("form .reverse");
+const amount = document.querySelector("form input");
+const exRateTxt = document.querySelector("form .result");
 
-// API Headers
-const apiHeaders = new Headers({
-    "apikey": "59xJt3cWsHVuXKtJAgO9a2RgMDVC6Gwy"
-});
 
-// Populating Dropdowns with Currency Options
+// Populate dropdowns with currency codes and set default values
 function populateDropdowns() {
-    const currencies = ["CAD", "USD", "GBP",  "JPY", "EUR", "INR", "HNL", "BDT", "AUD", "CHF", "BRL", "PHP", "OMR", "ZAR", "QAR", "MXN", "AED", "KRW", "SAR"];
-    const dropdown1 = document.getElementById('currency1');
-    const dropdown2 = document.getElementById('currency2');
-    currencies.forEach(currency => {
-        dropdown1.add(new Option(currency, currency));
-        dropdown2.add(new Option(currency, currency));
+    [fromCur, toCur].forEach((select, i) => {
+        for (let curCode in Country_List) {
+            const selected = (i === 0 && curCode === "USD") || (i === 1 && curCode === "GBP") ? "selected" : "";
+            select.insertAdjacentHTML("beforeend", `<option value="${curCode}" ${selected}>${curCode}</option>`);
+        }
     });
 }
 
-// Function to Convert Currency Using the API
-function convertCurrency() {
-    const fromCurrency = document.getElementById('currency1').value;
-    const toCurrency = document.getElementById('currency2').value;
-    const amount = document.getElementById('amount').value;
-
-    const requestOptions = {
-        method: 'GET',
-        redirect: 'follow',
-        headers: apiHeaders
-    };
-
-    fetch(`https://api.apilayer.com/currency_data/convert?to=${toCurrency}&from=${fromCurrency}&amount=${amount}`, requestOptions)
-        .then(response => response.json())
-        .then(result => {
-            console.log(result); // For debugging
-            // Update the conversion result on the webpage
-            const resultElement = document.getElementById('conversionResult');
-            if (result.success) {
-                resultElement.textContent = `${amount} ${fromCurrency} = ${result.result} ${toCurrency}`;
-            } else {
-                resultElement.textContent = 'Conversion failed. Please try again.';
-            }
-        })
-        .catch(error => console.error('Error converting currency:', error));
+// Update flag image based on selected currency
+function updateFlagImage(select) {
+    const code = select.value;
+    const imgTag = select.parentElement.querySelector("img");
+    imgTag.src = `https://flagcdn.com/48x36/${Country_List[code].toLowerCase()}.png`;
 }
 
-//////////News feed/////////////////
-// Replace 'YOUR_RSS_FEED_URL' with the actual RSS feed URL
+// Fetch exchange rate from API
+async function getExchangeRate() {
+    const amountVal = parseFloat(amount.value) || 1;
+    exRateTxt.innerText = "Getting exchange rate...";
+
+    var myHeaders = new Headers();
+    myHeaders.append("apikey", "59xJt3cWsHVuXKtJAgO9a2RgMDVC6Gwy");
+
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow',
+        headers: myHeaders
+    };
+
+    try {
+        const response = await fetch(`https://api.apilayer.com/currency_data/live?source=${fromCur.value}&currencies=${toCur.value}`, requestOptions);
+        if (!response.ok) throw new Error('Network response was not ok.');
+
+        const result = await response.json();
+        const exchangeRate = result.quotes[`${fromCur.value}${toCur.value}`];
+        const totalExRate = (amountVal * exchangeRate).toFixed(2);
+
+        exRateTxt.innerText = `${amountVal} ${fromCur.value} = ${totalExRate} ${toCur.value}`;
+    } catch (error) {
+        exRateTxt.innerText = `Error: ${error.message}`;
+    }
+}
+// Initialize event listeners
+function initEventListeners() {
+    [fromCur, toCur].forEach(select => {
+        select.addEventListener("change", () => updateFlagImage(select));
+    });
+
+    window.addEventListener("load", getExchangeRate);
+    getBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        getExchangeRate();
+    });
+
+    exIcon.addEventListener("click", () => {
+        [fromCur.value, toCur.value] = [toCur.value, fromCur.value];
+        [fromCur, toCur].forEach(updateFlagImage);
+        getExchangeRate();
+    });
+}
+
+// Initialize the application
+function init() {
+    populateDropdowns();
+    initEventListeners();
+}
+
+//News feed
 const rssFeedUrl = 'http://feeds.bbci.co.uk/news/rss.xml';
 const maxCount = 10;
 
@@ -70,3 +98,5 @@ fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeed
         });
     })
     .catch(error => console.error('Error fetching RSS feed:', error));
+
+init();
