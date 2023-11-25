@@ -84,23 +84,30 @@ body::after{
     transition: color 0.3s;
     display: flex;
     align-items: center;
+    padding: 5px;
 }
 
 .logo span{
     font-size: xx-large;
-    padding: 0 0 0 30px;
+    padding: 0 0 10px 30px;
 }
 
 .logo img{
-    width: 70pt;
-    padding: 0 0 0 5pt;
+    width: 60pt;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.44);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .main-content {
     display: flex;
     justify-content: space-between;
     margin-top: 60px; /* Adjust based on the height of the navbar */
-    padding: 20px;
+    padding: 45px 0 15px;
 }
 
 .news-sidebar {
