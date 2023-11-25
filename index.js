@@ -2,6 +2,7 @@
 const chartOptions = {
     chart: {
         type: 'area',
+        width: 370,
         height: 250,
         toolbar: { show: false }, // Hide chart toolbar
         zoom: { enabled: false } // Disable chart zooming
