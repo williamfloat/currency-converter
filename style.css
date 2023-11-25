@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
 *{
     margin: 0;
     padding: 0;
@@ -7,13 +5,15 @@
     outline: none;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    
 }
+
+
 
 body{
     min-height: 100vh;
     padding: 0 10px;
     background: #221f2f;
-    overflow: hidden;
 }
 
 body::before{
@@ -41,23 +41,49 @@ body::after{
     color: white;
     display: flex;
     justify-content: space-around;
-    padding: 10px 0;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
-.top-navbar a {
+.nav-links{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links a{
+    font-size: larger;
     color: white;
-    padding: 10px 15px;
+    padding: 35px 20px 0 0;
     text-decoration: none;
     transition: color 0.3s;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .top-navbar a:hover {
     color: #f1c40f;
+}
+
+.logo{
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.logo span{
+    font-size: xx-large;
+    padding: 0 0 0 30px;
+}
+
+.logo img{
+    width: 70pt;
+    padding: 0 0 0 5pt;
 }
 
 .main-content {
@@ -68,13 +94,20 @@ body::after{
 }
 
 .news-sidebar {
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    height: 58vh; /* Full viewport height */
-    overflow-y: auto; /* Scrollable content */
+    width: 25rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.44);
+    padding: 20px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    height: 68vh; /* Full viewport height */
+    overflow-y:auto /* Scrollable content */
+}
+.news-sidebar a{
+    color: rgba(248, 236, 2, 0.723);
 }
 
 .page-footer {
@@ -213,4 +246,97 @@ body::after{
 
 .container form button:hover{
     background: #675afe;
+}
+
+
+.card{
+    width: 26rem;
+    height: 33rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.44);
+    padding: 20px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card h2{
+    padding: 70px 0 25px;
+    color: #f8f8f8;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.card p{
+    color: #ccc;
+    font-size: 12px;
+    margin: 0 0 16px;
+}
+
+.card .pulse{
+    position: absolute;
+    background: #3498db;
+    width: 14px;
+    height: 14px;
+    right: 31px;
+    top: 35px;
+    border-radius: 50%;
+}
+
+.card .pulse::after{
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 0.1px solid #3498db;
+    transform-origin: center;
+    opacity: 0.8;
+    scale: 0;
+    animation: pulse 3s linear infinite;
+}
+
+.card .chart-area{
+    position:relative;
+}
+
+.card .chart-area .grid{
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(to right, transparent 0% 3%, #f9f9f9 3% 3.5%, transparent 3% 18.65%);
+}
+
+.card .chart-area .grid::after{
+    content: "";
+    position: inherit;
+    z-index: 1;
+    bottom: 0;
+    width: inherit;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(27, 27, 27, 1), rgba(27, 27, 27, 0.9), rgba(27, 27, 27, 1));
+}
+
+body .apexcharts-tooltip.apexcharts-theme-light{
+    color: #e2dede;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    box-shadow: none;
+    padding: 4px 4px 0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border: 0;
+}
+
+.apexcharts-tooltip-title, .apexcharts-xaxistooltip-bottom.apexcharts-theme-light{
+    display: none;
 }
