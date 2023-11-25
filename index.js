@@ -20,7 +20,7 @@ const chartOptions = {
         }
     },
     xaxis: {
-        categories: ['Feb', 'Apr', 'Jun', 'Aug', 'Oct', 'Dec'], // Set x-axis categories
+        categories: ['-5day', '-4day', '--3day', '-2day', '-1day', 'NOW'], // Set x-axis categories
         axisBorder: { show: false }, // Hide x-axis border
         labels: { style: { colors: '#a7a7a7', fontFamily: 'Poppins' } } // Set x-axis label properties
     },
