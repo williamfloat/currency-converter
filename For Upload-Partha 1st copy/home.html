@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Currency Converter</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <section>
+            <table>
+                <tr>
+                    <th>
+                        <nav class="top-navbar">
+                            <a href="home.html"> <img src="images/ba9e366e-cf6b-4fe9-9223-449f5b5184d8.webp"
+                                    alt="company logo"></a>
+                            <a href="home.html">
+                                <h2>AC Currency Converter</h2>
+                            </a>
+                            <a href="home.html">Home</a>
+                            <a href="news.html">News</a>
+                            <a href="contactUs.html">Contact Us</a>
+                            <a href="faq.html">FAQ</a>
+                            <a href="financeEducation.html">Finance Education</a>
+                            <a href="aboutUs.html">About Us</a>
+                        </nav>
+                    </th>
+                </tr>
+            </table>
+        </section>
+
+        <div class="main-content">
+            <div class="currency-converter">
+                <h2>Currency Converter</h2>
+                <select id="currency1"></select>
+                <select id="currency2"></select>
+                <input type="number" id="amount" name="amount" value="1" min="1" step="1">
+                <button onclick="convertCurrency()">Convert</button>
+                <p id="conversionResult"></p>
+            </div>
+
+            <div class="top-currencies">
+                <!-- Placeholder for top currencies and their charts -->
+            </div>
+
+            <aside class="news-sidebar">
+                <h2>Financial News</h2>
+                <div id="newsFeed"></div>
+            </aside>
+        </div>
+        <div class="videos">
+            <iframe src="https://www.youtube.com/embed/_TOCRjF9WuE?si=iazfymz7sn42KaH6" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+            <iframe src="https://www.youtube.com/embed/NYAiuqU20iQ?si=avMO_ho9Fsv8aknJ" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+            <iframe src="https://www.youtube.com/embed/94-xtirX0Lo?si=iFPIp6moAUBQzY-d" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+            <iframe src="https://www.youtube.com/embed/OhkFbgxQuXA?si=TcLZy1P-HWm6dYba" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+            <iframe src="https://www.youtube.com/embed/1i9nJ4cO2mM?si=WIyUEVL6MVsztLel" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+            <iframe src="https://www.youtube.com/embed/95jabRNJ6Ng?si=5Xgb4MbQrW-ppC5L" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+            <iframe src="https://www.youtube.com/embed/WCmO0fre9Fc?si=_ZDvXMvsZwtDotbU" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <footer class="page-footer">
+            <div class="footer-right">
+                <address>
+                    Contact Us<br>
+                    123 Main St, Ottawa, ON. K1J 2WD<br>
+                    +1-613-123-5678<br>
+                    <a
+                        href="maito:info@ottawacurrency.com?subject=Inquiry about present currency exchange rates">info@ottawacurrency.com</a>
+                </address>
+            </div>
+        </footer>
+
+    </body>
+
+</html>

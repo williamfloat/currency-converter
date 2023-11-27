@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="map.js"></script>
+    </head>
+
+    <body>
+        <section>
+            <table>
+                <tr>
+                    <th>
+                        <nav class="top-navbar">
+                            <a href="home.html"> <img src="images/ba9e366e-cf6b-4fe9-9223-449f5b5184d8.webp"
+                                    alt="company logo"></a>
+                            <a href="home.html">
+                                <h2>AC Currency Converter</h2>
+                            </a>
+                            <a href="home.html">Home</a>
+                            <a href="news.html">News</a>
+                            <a href="contactUs.html">Contact Us</a>
+                            <a href="faq.html">FAQ</a>
+                            <a href="financeEducation.html">Finance Education</a>
+                            <a href="aboutUs.html">About Us</a>
+                        </nav>
+                    </th>
+                </tr>
+            </table>
+        </section>
+
+        <h2>Contact</h2>
+        <p>Our Ofice Hours:<br>
+            Monday-Friday: 8:00 to 17:00 <br>
+            Saturday: 10:00 to 15:00 <br>
+            Sunday: Close <br>
+        </p>
+        <p>Our office is located at:</p>
+
+        <div id="map-container"></div>
+
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqQK3VPBIH6nGvxfigze0-GnpFI8PqjFA&callback=initMap"
+            async defer></script><br>
+
+        <form id="contactForm">
+            <label for="name">Name<span class="error">*</span></label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number<span class="error">*</span></label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="e.g., 1234567890" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                placeholder="e.g., example@email.com">
+
+            <label for="message">Message<span class="error">*</span></label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="button" onclick="validateForm()">Submit</button>
+        </form><br>
+
+
+    </body>
+
+    <footer class="page-footer">
+        <div class="footer-right">
+            <address>
+                Contact Us<br>
+                123 Main St, Ottawa, ON. K1J 2WD<br>
+                +1-613-123-5678<br>
+                <a
+                    href="maito:info@ottawacurrency.com?subject=Inquiry about present currency exchange rates">info@ottawacurrency.com</a>
+            </address>
+        </div>
+    </footer>
+
+</html>
