@@ -93,7 +93,7 @@ body::after{
 }
 
 .logo img{
-    width: 65pt;
+    width: 60pt;
     color: #fff;
     background: rgba(0, 0, 0, 0.44);
     border-radius: 20px;
@@ -132,24 +132,24 @@ body::after{
     color: white;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /*justify-content: space-between;*/
     color: #fff;
     border-radius: 16px;
     backdrop-filter: blur(7.4px);
     -webkit-backdrop-filter: blur(7.4px);
 }
 
-.videos iframe {
-    width: 125px;
-    height: 100px;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.44);
-    border-radius: 16px;
+.page-footer img {
+    width: 150px;
+    border-radius: 10%;
+    margin: 2px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.4px);
-    -webkit-backdrop-filter: blur(7.4px);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-right {
+    margin: 20px;
+    color: #fff;
+    text-align: right;
 }
 
 .container {
@@ -339,7 +339,7 @@ body::after{
     z-index: 0;
     top: 0;
     left: 0;
-    width: 95%;
+    width: 100%;
     height: 100%;
     background-image: repeating-linear-gradient(to right, transparent 0% 3%, #f9f9f9 3% 3.5%, transparent 3% 18.65%);
 }
@@ -368,94 +368,4 @@ body .apexcharts-tooltip.apexcharts-theme-light{
 
 .apexcharts-tooltip-title, .apexcharts-xaxistooltip-bottom.apexcharts-theme-light{
     display: none;
-}
-
-
-h4 {
-    font-size: 16px;
-    color: #333;
-    margin: 20px 0;
-}
-
-.faq {
-    background-color: #9fdaea;
-    border-radius: 10px;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 800px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    text-align: left;
-}
-
-.faq h2 {
-    text-align: center;
-    position: flex;
-}
-
-.page-footer address {
-    text-align: right;
-    display: inline-block;
-    margin-left: 950px;
-}
-
-.page-footer a {
-    color: white;
-}
-
-#map-container {
-    height: 400px;
-    width: 100%;
-}
-
-form {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 800px;
-    max-width: 100%;
-    margin: auto;
-}
-
-/* label {
-    display: block;
-    margin-bottom: 8px;
-} */
-
-input,
-textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-}
-
-/* input:focus,
-textarea:focus {
-    border-color: #007bff;
-} */
-
-button {
-    background-color: #2e4a6f;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-button:hover,
-button:focus {
-    background-color: #0056b3;
-}
-
-.error {
-    color: red;
-    font-size: 12px;
-    margin-top: -8px;
-    margin-bottom: 10px;
 }
