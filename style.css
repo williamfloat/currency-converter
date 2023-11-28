@@ -93,7 +93,7 @@ body::after{
 }
 
 .logo img{
-    width: 65pt;
+    width: 60pt;
     color: #fff;
     background: rgba(0, 0, 0, 0.44);
     border-radius: 20px;
@@ -132,19 +132,23 @@ body::after{
     color: white;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /*justify-content: space-between;*/
     color: #fff;
     border-radius: 16px;
     backdrop-filter: blur(7.4px);
     -webkit-backdrop-filter: blur(7.4px);
 }
 
-
-.page-footer img {
-    width: 150px;
-    border-radius: 10%;
+.videos iframe {
+    width: 125px;
+    height: 100px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.44);
+    border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 
@@ -368,13 +372,9 @@ body .apexcharts-tooltip.apexcharts-theme-light{
 
 
 h4 {
-    background-color: #9fdaea;
-    border-radius: 10px;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 800px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    text-align: left;
+    font-size: 16px;
+    color: #333;
+    margin: 20px 0;
 }
 
 .faq {
@@ -392,59 +392,30 @@ h4 {
     position: flex;
 }
 
-.opentime h2 {
-    color: #fff;
-    font-size: 24px;
-    text-align: center;
-    padding: 35px;
+.page-footer address {
+    text-align: right;
+    display: inline-block;
+    margin-left: 950px;
 }
 
-.opentime p {
-    color: #fff; 
-    font-size: 18px;
-    text-align: center;
-    padding: 10px;
-}
-
-.map p {
-    color: #fff;
-    font-size: 18px;
-    text-align: center;
-    padding: 10px;
+.page-footer a {
+    color: white;
 }
 
 #map-container {
-    height: 600px;
+    height: 400px;
     width: 100%;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.44);
-    padding: 20px 30px;
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.4px);
-    -webkit-backdrop-filter: blur(7.4px);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    position: absolute;
-    z-index: -1;
 }
 
 form {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #333;
     color: white;
-    padding: 60px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 800px;
     max-width: 100%;
     margin: auto;
-    position: relative;
-    background: rgba(0, 0, 0, 0.44);
-    padding: 20px 30px;
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.4px);
-    -webkit-backdrop-filter: blur(7.4px);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    margin-top: 350px;
-    margin-bottom: 50px;
 }
 
 /* label {
