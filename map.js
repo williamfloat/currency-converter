@@ -16,20 +16,20 @@ function validateForm() {
     var email = document.getElementById('email').value;
     var message = document.getElementById('message').value;
 
-    // Simple validation
+    
     if (name.trim() === '' || phone.trim() === '' || message.trim() === '') {
         alert('Name, phone number, and message are required fields.');
         return false;
     }
 
-    // Phone number validation
+    
     var phoneRegex = /^[0-9]{10}$/;
     if (!phoneRegex.test(phone)) {
         alert('Please enter a valid 10-digit phone number.');
         return false;
     }
 
-    // Email validation
+    
     if (email.trim() !== '') {
         var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         if (!emailRegex.test(email)) {
@@ -38,10 +38,10 @@ function validateForm() {
         }
     }
 
-    // If all validations pass, you can submit the form or take further actions
+    
     alert('Form submitted successfully!');
 
-    // Reload the page
+    
     location.reload();
 
     return true;
