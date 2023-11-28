@@ -10,7 +10,7 @@
 <body>
     <nav class="top-navbar">
         <div class="logo">
-            <img src="images/Logo-DesignTransparentBG.png" alt="AC Currency Converter Logo">
+            <img src="images/Logo-Design_blackBG.png" alt="AC Currency Converter Logo">
             <span>AC Currency Converter</span>
         </div>
         <div class="nav-links">
@@ -21,20 +21,19 @@
             <a href="aboutUs.html">About Us</a>
         </div>
     </nav>
+        <div class="opentime">
+            <h2>Contact</h2>
+            <p>Our Ofice Hours:<br>
+                Monday-Friday: 8:00 to 17:00 <br>
+                Saturday: 10:00 to 15:00 <br>
+                Sunday: Close <br>
+            </p>
+        </div>
 
-        <h2>Contact</h2>
-        <p>Our Ofice Hours:<br>
-            Monday-Friday: 8:00 to 17:00 <br>
-            Saturday: 10:00 to 15:00 <br>
-            Sunday: Close <br>
-        </p>
+        <div class="map">
         <p>Our office is located at:</p>
-
         <div id="map-container"></div>
-
-        <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqQK3VPBIH6nGvxfigze0-GnpFI8PqjFA&callback=initMap"
-            async defer></script><br>
+        </div> 
 
         <form id="contactForm">
             <label for="name">Name<span class="error">*</span></label>
@@ -51,25 +50,17 @@
             <textarea id="message" name="message" rows="4" required></textarea>
 
             <button type="button" onclick="validateForm()">Submit</button>
-        </form><br>
+        </form>
 
 
     <footer class="page-footer">
         <div class="videos">
-            <iframe src="https://www.youtube.com/embed/_TOCRjF9WuE?si=iazfymz7sn42KaH6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-            </iframe>
-            <iframe src="https://www.youtube.com/embed/NYAiuqU20iQ?si=avMO_ho9Fsv8aknJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-            </iframe>
-            <iframe src="https://www.youtube.com/embed/94-xtirX0Lo?si=iFPIp6moAUBQzY-d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-            </iframe>
-            <iframe src="https://www.youtube.com/embed/OhkFbgxQuXA?si=TcLZy1P-HWm6dYba" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-            </iframe>
-            <iframe src="https://www.youtube.com/embed/1i9nJ4cO2mM?si=WIyUEVL6MVsztLel" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-            </iframe>
-            <iframe src="https://www.youtube.com/embed/95jabRNJ6Ng?si=5Xgb4MbQrW-ppC5L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-            </iframe>
-            <iframe src="https://www.youtube.com/embed/WCmO0fre9Fc?si=_ZDvXMvsZwtDotbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-            </iframe>
+            <a href="https://youtu.be/_TOCRjF9WuE?si=DzksWg5hYlKL8pZr" target="_blank"><img src="images/thumb1.jpg" alt="The race for semiconductor supremacy | FT Film"></a>
+            <a href="https://youtu.be/NYAiuqU20iQ?si=DZzy56P3cel4j8Dz" target="_blank"><img src="images/thumb2.jpg" alt="Has China's Belt and Road Initiative been a success? | FT"></a>
+            <a href="https://youtu.be/94-xtirX0Lo?si=tOV6wL8cDJDL-Maw" target="_blank"><img src="images/thumb3.jpg" alt="The creator economy is changing, but can it thrive? | FT Tech"></a>
+            <a href="https://youtu.be/OhkFbgxQuXA?si=z3hCPhyh8HX4VILA" target="_blank"><img src="images/thumb4.jpg" alt="Greensill, Gupta and Cameron: what went wrong | FT Film"></a>
+            <a href="https://youtu.be/1i9nJ4cO2mM?si=69v9dhp4ggtQkSgU" target="_blank"><img src="images/thumb5.jpg" alt="Can the steel industry go green? | FT Climate Capital"></a>
+            <a href="https://youtu.be/95jabRNJ6Ng?si=G2YaiUovFGeLNwmN" target="_blank"><img src="images/thumb6.jpg" alt="The ESG investment backlash is beginning to have an impact | FT Moral Money"></a>
         </div>
 
         <div class="footer-right">
@@ -83,5 +74,6 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="index.js"></script>
     <script src="map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqQK3VPBIH6nGvxfigze0-GnpFI8PqjFA&callback=initMap" async defer></script><br>
 </body>
 </html>
