@@ -22,50 +22,37 @@
         </div>
     </nav>
 
-    <div class="main-content">
-        <div class="container">
-            <h2>Currency Converter</h2>
-            <form>
-                <div class="amount">
-                    <p>Amount</p>
-                    <input type="text" value="1">
-                </div>
-                <div class="convert-box">
-                    <div class="from">
-                        <p>From</p>
-                        <div class="select-input">
-                            <img src="https://flagcdn.com/48x36/us.png">
-                            <select></select>
-                        </div>
-                    </div>
-                    <div class="reverse"><i class="fas fa-exchange-alt"></i></div>
-                    <div class="to">
-                        <p>To</p>
-                        <div class="select-input">
-                            <img src="https://flagcdn.com/48x36/ca.png">
-                            <select></select>
-                        </div>
-                    </div>
-                    <div class="result">Getting exchange rate...</div>
-                    <button>Get Exchange Rate</button>
-                </div>
-            </form>
-        </div>
+        <h2>Contact</h2>
+        <p>Our Ofice Hours:<br>
+            Monday-Friday: 8:00 to 17:00 <br>
+            Saturday: 10:00 to 15:00 <br>
+            Sunday: Close <br>
+        </p>
+        <p>Our office is located at:</p>
 
-        <div class="card">
-            <h2>Currency Charts</h2>
-            <p>By month</p>
-            <div class="pulse"></div>
-            <div class="chart-area">
-                <div class="grid"></div>
-            </div>
-        </div>
+        <div id="map-container"></div>
 
-        <aside class="news-sidebar">
-            <h3>Financial News</h3>
-            <div id="newsFeed"></div>
-        </aside>
-    </div>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqQK3VPBIH6nGvxfigze0-GnpFI8PqjFA&callback=initMap"
+            async defer></script><br>
+
+        <form id="contactForm">
+            <label for="name">Name<span class="error">*</span></label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number<span class="error">*</span></label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="e.g., 1234567890" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                placeholder="e.g., example@email.com">
+
+            <label for="message">Message<span class="error">*</span></label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="button" onclick="validateForm()">Submit</button>
+        </form><br>
+
 
     <footer class="page-footer">
         <div class="videos">
@@ -95,5 +82,6 @@
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="index.js"></script>
+    <script src="map.js"></script>
 </body>
 </html>

@@ -30,7 +30,7 @@ const chartOptions = {
     },
     tooltip: {
         enabled: true, // 启用工具提示
-        y: { formatter: value => `${value}K` }, // 设置Y轴工具提示标签格式化
+        y: { formatter: value => `${value}` }, // 设置Y轴工具提示标签格式化
         style: { fontFamily: 'Poppins' } // 设置工具提示字体样式
     },
     markers: { show: false } // 隐藏图表标记
