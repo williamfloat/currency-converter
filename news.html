@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="top-navbar">
+        <div class="logo">
+            <img src="images/Logo-DesignTransparentBG.png" alt="AC Currency Converter Logo">
+            <span>AC Currency Converter</span>
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="aboutUs.html">About Us</a>
+            <a href="contactUs.html">Contact Us</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+    </nav>
+
+        <div class="faqh2">
+            <h2>News for AC Currency Converter</h2>
+        </div>
+         <!--div class="faq">
+            <h3>1. What is Currency Conversion?</h3>
+            <div class="faq-1">
+                Currency conversion is the process of converting the value of one currency into another. It helps users
+                understand the equivalent value of their money in different currencies.
+            </div>
+         </div-->
+
+            <div class="news-container">
+                <!--h1>The Guardian News</h1-->
+                <ul id="news-list"></ul>
+            </div>
+
+        <footer class="page-footer">
+        <div class="videos">
+            <a href="https://youtu.be/_TOCRjF9WuE?si=DzksWg5hYlKL8pZr" target="_blank"><img src="images/thumb1.jpg" alt="The race for semiconductor supremacy | FT Film"></a>
+            <a href="https://youtu.be/NYAiuqU20iQ?si=DZzy56P3cel4j8Dz" target="_blank"><img src="images/thumb2.jpg" alt="Has China's Belt and Road Initiative been a success? | FT"></a>
+            <a href="https://youtu.be/94-xtirX0Lo?si=tOV6wL8cDJDL-Maw" target="_blank"><img src="images/thumb3.jpg" alt="The creator economy is changing, but can it thrive? | FT Tech"></a>
+            <a href="https://youtu.be/OhkFbgxQuXA?si=z3hCPhyh8HX4VILA" target="_blank"><img src="images/thumb4.jpg" alt="Greensill, Gupta and Cameron: what went wrong | FT Film"></a>
+            <a href="https://youtu.be/1i9nJ4cO2mM?si=69v9dhp4ggtQkSgU" target="_blank"><img src="images/thumb5.jpg" alt="Can the steel industry go green? | FT Climate Capital"></a>
+            <a href="https://youtu.be/95jabRNJ6Ng?si=G2YaiUovFGeLNwmN" target="_blank"><img src="images/thumb6.jpg" alt="The ESG investment backlash is beginning to have an impact | FT Moral Money"></a>
+        </div>
+
+        <div class="footer-right">
+            <p>1385 Woodroffe Ave, Ottawa, ON K2G 1V8</p>
+            <p>+1(613) 727-4723</p>
+            <p>ac.currency.converter@gmail.com</p>
+        </div>
+    </footer>
+<script>
+const apiKey = '5f53de91-d201-4f18-8534-c2f1a0b5b30b'; // Replace with your API key
+//const apiUrl = 'https://content.guardianapis.com/search?order-by=newest&api-key=' + apiKey;
+const apiUrl = `https://content.guardianapis.com/search?section=business&tag=business/business&api-key=${apiKey}`;
+const newsList = document.getElementById('news-list');
+
+async function getNews() {
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+
+        if (data.response && data.response.results.length > 0) {
+            data.response.results.forEach(article => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <h3>${article.webTitle}</h3>
+                    <p>${article.webPublicationDate}</p>
+                    <a href="${article.webUrl}" target="_blank">Read more</a>
+                `;
+                newsList.appendChild(li);
+            });
+        } else {
+            newsList.innerHTML = '<li>No news available</li>';
+        }
+    } catch (error) {
+        console.error('Error fetching news:', error);
+        newsList.innerHTML = '<li>Failed to fetch news</li>';
+    }
+}
+
+// Call the function to fetch news
+getNews();
+</script>   
+</body>
+</html>

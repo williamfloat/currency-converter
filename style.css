@@ -356,6 +356,13 @@ body::after{
     max-width: 500px;
 }
 
+.news-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
 @media screen and (max-width: 768px) {
     .news-sidebar, .card, .container {
         width: 100%;
@@ -395,6 +402,16 @@ h4 {
 }
 
 .faq {
+    background-color: #9fdaea;
+    border-radius: 10px;
+    margin:20px auto;
+    padding: 20px;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.news-container {
     background-color: #9fdaea;
     border-radius: 10px;
     margin:20px auto;
