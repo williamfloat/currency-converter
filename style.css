@@ -401,6 +401,16 @@ h4 {
     text-align: left;
 }
 
+.news-container {
+    background-color: #9fdaea;
+    border-radius: 10px;
+    margin:20px auto;
+    padding: 20px;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
 .faqh2 {
     background-color: #9fdaea;
     border-radius: 10px;
