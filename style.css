@@ -130,18 +130,8 @@ body::after{
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-.container {
-    width: 25rem;
-    height: 34rem;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.44);
-    padding: 20px 30px;
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.4px);
-    -webkit-backdrop-filter: blur(7.4px);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
+
+
 
 .container h2{
     font-size: 1.6rem;
@@ -356,14 +346,21 @@ body::after{
     max-width: 500px;
 }
 
-@media screen and (max-width: 768px) {
-    .news-sidebar, .card, .container {
-        width: 100%;
-    }
-    .testimonial-img {
-        width: 60px;
-        height: 60px;
-    }
+.news-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.news-container {
+    background-color: #9fdaea;
+    border-radius: 10px;
+    margin:20px auto;
+    padding: 20px;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
 }
 
 body .apexcharts-tooltip.apexcharts-theme-light{
@@ -443,7 +440,7 @@ h4 {
     width: 70%;
     color: #fff;
     background: rgba(0, 0, 0, 0.44);
-    padding: 20px 30px;
+    padding: 10px 30px;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7.4px);
@@ -453,7 +450,6 @@ h4 {
     top: 50%; /* Set top to 50% of the parent element */
     left: 50%; /* Set left to 50% of the parent element */
     transform: translate(-50%, -50%); /* Offset by -50% of its own width and height */
-    margin-top: 120px;
     z-index: -1;
 }
 
@@ -465,14 +461,14 @@ form {
     max-width: 100%;
     margin: auto;
     position: relative;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.76);
     padding: 20px 30px;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7.4px);
     -webkit-backdrop-filter: blur(7.4px);
     border: 1px solid rgba(0, 0, 0, 0.1);
-    margin-top: 300px;
+    margin-top: 360px;
     margin-bottom: 50px;
 }
 
@@ -587,6 +583,14 @@ button:focus {
 }
 
 @media only screen and (max-width: 768px) {
+    .news-sidebar, .card, .container {
+        width: 100%;
+    }
+    .testimonial-img {
+        width: 60px;
+        height: 60px;
+    }
+
     .testimonial-text {
         font-size: 1rem;
     }
