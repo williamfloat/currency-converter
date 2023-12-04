@@ -235,7 +235,21 @@ header.sticky nav a{
         width: 70px;
         height: 70px;
     }
+    .news-sidebar, .card, .container {
+        width: 100%;
+    }
+    .testimonial-img {
+        width: 60px;
+        height: 60px;
+    }
 
+    .testimonial-text {
+        font-size: 1rem;
+    }
+
+    .testimonial-author {
+        font-size: 0.8rem;
+    }
 }
 
 
@@ -536,25 +550,12 @@ h4 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
-.opentime h2 {
-    color: #fff;
-    font-size: 24px;
-    text-align: center;
-    padding: 35px;
-}
-
-.opentime p {
-    color: #fff; 
-    font-size: 18px;
-    text-align: center;
-    padding: 10px;
-}
-
 .map p {
     color: #fff;
     font-size: 18px;
     text-align: center;
     padding: 10px;
+    margin-top: 40px;
 }
 
 #map-container {
@@ -730,22 +731,4 @@ button:focus {
 
 .footer-right a{
     color: #fff;
-}
-
-@media only screen and (max-width: 768px) {
-    .news-sidebar, .card, .container {
-        width: 100%;
-    }
-    .testimonial-img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .testimonial-text {
-        font-size: 1rem;
-    }
-
-    .testimonial-author {
-        font-size: 0.8rem;
-    }
 }
