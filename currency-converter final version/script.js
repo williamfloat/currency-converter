@@ -1,3 +1,4 @@
+//Zhengyuan Liu（william）//
 const fromCur = document.querySelector(".from select");
 const toCur = document.querySelector(".to select");
 const getBtn = document.querySelector("form button");
@@ -75,32 +76,6 @@ function init() {
     initEventListeners();
 }
 
-//News feed
-const rssFeedUrl = 'http://feeds.bbci.co.uk/news/rss.xml';
-const maxCount = 10;
-
-// Fetch the RSS feed
-fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`)
-    .then(response => response.json())
-    .then(data => {
-        // Display the news feed
-        const feedContainer = document.getElementById('newsFeed');
-        data.items.slice(0, maxCount).forEach(item => {
-            const article = document.createElement('div');
-            article.innerHTML = `
-                <h3>${item.title}</h3>
-                <p>${item.description}</p>
-                <p id="dateFeed">${item.pubDate}</p>
-                <a href="${item.link}" target="_blank">Read more</a><br>
-                ------------------------------------
-            `;
-            feedContainer.appendChild(article);
-        });
-    })
-    .catch(error => console.error('Error fetching RSS feed:', error));
-
-init();
-
 document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('header');
     const container = document.getElementById('container');
@@ -148,9 +123,35 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('click', handleCloseOutside);
 });
 
+//---------------------------Ernesto Davila----------------------------------------//
+//News feed
+const rssFeedUrl = 'http://feeds.bbci.co.uk/news/rss.xml';
+const maxCount = 10;
 
-const apiKey = '5f53de91-d201-4f18-8534-c2f1a0b5b30b'; // Replace with your API key
-//const apiUrl = 'https://content.guardianapis.com/search?order-by=newest&api-key=' + apiKey;
+// Fetch the RSS feed
+fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`)
+    .then(response => response.json())
+    .then(data => {
+        // Display the news feed
+        const feedContainer = document.getElementById('newsFeed');
+        data.items.slice(0, maxCount).forEach(item => {
+            const article = document.createElement('div');
+            article.innerHTML = `
+                <h3>${item.title}</h3>
+                <p>${item.description}</p>
+                <p id="dateFeed">${item.pubDate}</p>
+                <a href="${item.link}" target="_blank">Read more</a><br>
+                ------------------------------------
+            `;
+            feedContainer.appendChild(article);
+        });
+    })
+    .catch(error => console.error('Error fetching RSS feed:', error));
+
+init();
+
+
+const apiKey = '5f53de91-d201-4f18-8534-c2f1a0b5b30b'; 
 const apiUrl = `https://content.guardianapis.com/search?section=business&tag=business/business&api-key=${apiKey}`;
 const newsList = document.getElementById('news-list');
 
@@ -178,5 +179,4 @@ async function getNews() {
     }
 }
 
-// Call the function to fetch news
 getNews();
