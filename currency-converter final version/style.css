@@ -238,16 +238,16 @@ header.sticky nav a{
     .news-sidebar, .card, .container {
         width: 100%;
     }
-    .testimonial-img {
+    .aboutus-img {
         width: 60px;
         height: 60px;
     }
 
-    .testimonial-text {
+    .aboutus-text {
         font-size: 1rem;
     }
 
-    .testimonial-author {
+    .aboutus-author {
         font-size: 0.8rem;
     }
 }
@@ -627,25 +627,25 @@ button:focus {
 }
 
 
-.testimonial-section {
+.aboutus-section {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80vh;
 }
 
-#testimonial-container {
+#aboutus-container {
     position: relative;
     max-width: 80%;
     overflow: hidden;
 }
 
-#testimonial-slider {
+#aboutus-slider {
     display: flex;
     transition: transform 0.5s ease;
 }
 
-.testimonial {
+.aboutus {
     min-width: 100%;
     text-align: center;
     color: #fff; /* Text color */
@@ -654,7 +654,7 @@ button:focus {
     margin-top: 150px;
 }
 
-.testimonial img {
+.aboutus img {
     width: 80px; /* Adjust size as needed */
     height: 80px; /* Adjust size as needed */
     border-radius: 50%; /* Circular image */
@@ -662,20 +662,20 @@ button:focus {
     display: block;
 }
 
-.testimonial-text {
+.aboutus-text {
     color: #fff;
     font-size: 1.2rem;
     padding: 20px;
     margin: 0;
 }
 
-.testimonial-author {
+.aboutus-author {
     color: #999;
     font-size: 1rem;
     margin-top: 10px;
 }
 
-.testimonial-arrows {
+.aboutus-arrows {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -732,3 +732,4 @@ button:focus {
 .footer-right a{
     color: #fff;
 }
+
