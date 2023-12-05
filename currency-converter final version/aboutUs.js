@@ -1,3 +1,4 @@
+//Zhengyuan Liu（william）//
 let currentSlide = 0;
 const slides = document.querySelectorAll('.aboutus');
 const slideContainer = document.getElementById('aboutus-slider');
