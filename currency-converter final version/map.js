@@ -1,3 +1,4 @@
+//Partha Sinha//
 function initMap() {
     var location = { lat: 45.3499, lng: -75.7549 }; // Replace with the actual latitude and longitude of your location
     var map = new google.maps.Map(document.getElementById('map-container'), {
