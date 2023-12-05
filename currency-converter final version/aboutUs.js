@@ -1,6 +1,6 @@
 let currentSlide = 0;
-const slides = document.querySelectorAll('.testimonial');
-const slideContainer = document.getElementById('testimonial-slider');
+const slides = document.querySelectorAll('.aboutus');
+const slideContainer = document.getElementById('aboutus-slider');
 const totalSlides = slides.length;
 
 function showSlides() {
@@ -22,5 +22,5 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-// Initialize the slider with the first testimonial
+// Initialize the slider with the first aboutus
 showSlides();
